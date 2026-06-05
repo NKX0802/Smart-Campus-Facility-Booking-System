@@ -9,10 +9,11 @@ function AppContent({ Component, pageProps }) {
   const router = useRouter()
   const isAdminPage = router.pathname.startsWith('/admin')
   const isHomePage = router.pathname === '/'
+  const isAuthPage = router.pathname === '/login' || router.pathname === '/register'
 
   return (
     <>
-      {!isAdminPage && !isHomePage && <Navbar />}
+      {!isAdminPage && !isHomePage && !isAuthPage && <Navbar />}
       <main>
         <Component {...pageProps} />
       </main>

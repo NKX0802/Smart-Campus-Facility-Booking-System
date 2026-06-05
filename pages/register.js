@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { User, Mail, Lock, Eye, EyeOff, Building2, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { User, Mail, Lock, Eye, EyeOff, Building2, ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useTheme } from '@/lib/themeContext'
 
@@ -48,6 +48,15 @@ export default function RegisterPage() {
           : 'linear-gradient(to bottom right, #f0fdf4, #ffffff, #ecfdf5)',
       }}
     >
+      {/* Back to home */}
+      <Link
+        href="/"
+        className="fixed top-4 left-4 flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-emerald-600 bg-white hover:bg-emerald-50 border border-gray-200 hover:border-emerald-300 px-3 py-2 rounded-xl shadow-sm transition-all duration-200"
+      >
+        <ArrowLeft size={15} />
+        Back
+      </Link>
+
       <div className="w-full max-w-md">
 
         {/* Logo */}
