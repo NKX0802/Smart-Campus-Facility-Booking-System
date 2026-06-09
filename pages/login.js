@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react'
 import Link from 'next/link'
-import { Mail, Lock, Eye, EyeOff, Building2, ArrowRight, ArrowLeft, GraduationCap, Shield } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, Building2, ArrowRight, ArrowLeft, User, Shield } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useRole } from '@/lib/roleContext'
 import { useTheme } from '@/lib/themeContext'
@@ -8,8 +8,8 @@ import { FAKE_STUDENT, FAKE_ADMIN } from '@/lib/fakeData'
 
 const DEMO_ACCOUNTS = [
   {
-    label: 'Student Account',
-    icon: GraduationCap,
+    label: 'User Account',
+    icon: User,
     email: FAKE_STUDENT.user_email,
     password: 'student123',
     role: 'user',

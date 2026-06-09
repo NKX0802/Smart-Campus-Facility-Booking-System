@@ -57,7 +57,7 @@ export default function AdminBookingsPage() {
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Search by student or facility…"
+            placeholder="Search by user or facility…"
             className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition text-gray-900 placeholder-gray-300 bg-white"
           />
         </div>
@@ -84,7 +84,7 @@ export default function AdminBookingsPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-100">
-                {['Student', 'Facility', 'Date & Time', 'Group', 'Status', 'Actions'].map(h => (
+                {['User', 'Facility', 'Date & Time', 'Group', 'Status', 'Actions'].map(h => (
                   <th key={h} className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider whitespace-nowrap">{h}</th>
                 ))}
               </tr>

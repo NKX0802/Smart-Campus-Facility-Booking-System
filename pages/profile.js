@@ -48,7 +48,7 @@ export default function ProfilePage() {
             <p className="font-bold text-gray-900 text-lg" style={{ fontFamily: 'Nunito, sans-serif' }}>{name}</p>
             <p className="text-sm text-gray-500">{email}</p>
             <span className="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-full text-xs font-semibold">
-              Student
+              User
             </span>
           </div>
         </div>

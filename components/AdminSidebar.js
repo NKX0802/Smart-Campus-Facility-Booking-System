@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import {
   LayoutDashboard, Building2, Calendar, AlertCircle,
   Bell, User, ChevronLeft, ChevronRight, Building,
-  GraduationCap, Shield,
+  Shield,
 } from 'lucide-react'
 import { useRole } from '@/lib/roleContext'
 
@@ -79,12 +79,12 @@ export default function AdminSidebar() {
         )}
         <button
           onClick={() => switchRole('user')}
-          title={collapsed ? 'Switch to Student' : undefined}
+          title={collapsed ? 'Switch to User' : undefined}
           className={`w-full flex items-center gap-2 py-2 rounded-xl text-xs font-semibold text-gray-400 hover:bg-gray-800 hover:text-white active:bg-gray-700 transition-all duration-150
             ${collapsed ? 'justify-center px-0' : 'px-3'}`}
         >
-          <GraduationCap size={15} />
-          {!collapsed && 'Switch to Student'}
+          <User size={15} />
+          {!collapsed && 'Switch to User'}
         </button>
       </div>
 

@@ -24,7 +24,7 @@ function buildReport(bookings) {
 
 const STATS = [
   { label: 'Total No-Shows', value: noShowBookings.length, color: 'text-red-600 bg-red-50 border-red-100' },
-  { label: 'Students Affected', value: buildReport(noShowBookings).length, color: 'text-amber-600 bg-amber-50 border-amber-100' },
+  { label: 'Users Affected', value: buildReport(noShowBookings).length, color: 'text-amber-600 bg-amber-50 border-amber-100' },
   { label: 'This Month', value: noShowBookings.filter(b => b.booking_date.startsWith('2026-05') || b.booking_date.startsWith('2026-06')).length, color: 'text-indigo-600 bg-indigo-50 border-indigo-100' },
 ]
 
@@ -54,8 +54,8 @@ export default function AdminNoshowsPage() {
       {/* Report table */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
         <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-          <h2 className="font-bold text-gray-800" style={{ fontFamily: 'Nunito, sans-serif' }}>Students with No-Shows</h2>
-          <span className="text-xs text-gray-400">{report.length} student{report.length !== 1 ? 's' : ''}</span>
+          <h2 className="font-bold text-gray-800" style={{ fontFamily: 'Nunito, sans-serif' }}>Users with No-Shows</h2>
+          <span className="text-xs text-gray-400">{report.length} user{report.length !== 1 ? 's' : ''}</span>
         </div>
 
         {report.length === 0 ? (

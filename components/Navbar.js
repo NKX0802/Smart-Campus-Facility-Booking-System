@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
   Building2, LayoutDashboard, Bell, QrCode, Star,
-  User, Menu, X, Shield, GraduationCap, Sun, Moon, LogOut,
+  User, Menu, X, Shield, Sun, Moon, LogOut,
 } from 'lucide-react'
 import { useRole } from '@/lib/roleContext'
 import { useTheme } from '@/lib/themeContext'
@@ -114,7 +114,7 @@ export default function Navbar() {
                   role === 'user' ? 'bg-white text-emerald-700 shadow-sm' : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
-                <GraduationCap size={13} /> Student
+                <User size={13} /> User
               </button>
               <button
                 onClick={() => switchRole('admin')}
@@ -198,7 +198,7 @@ export default function Navbar() {
                   role === 'user' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700'
                 }`}
               >
-                <GraduationCap size={15} /> Student
+                <User size={15} /> User
               </button>
               <button
                 onClick={() => switchRole('admin')}

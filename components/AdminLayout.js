@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
   Building, LayoutDashboard, Building2, Calendar, AlertCircle,
-  Bell, User, GraduationCap, Menu, X, Sun, Moon, LogOut,
+  Bell, User, Menu, X, Sun, Moon, LogOut,
 } from 'lucide-react'
 import { useRole } from '@/lib/roleContext'
 import { useTheme } from '@/lib/themeContext'
@@ -111,12 +111,12 @@ export default function AdminLayout({ children, title }) {
                 {dark ? <Sun size={17} /> : <Moon size={17} />}
               </button>
 
-              {/* Switch to Student */}
+              {/* Switch to User */}
               <button
                 onClick={() => switchRole('user')}
                 className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-semibold hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-200"
               >
-                <GraduationCap size={13} /> Student
+                <User size={13} /> User
               </button>
 
               {/* Admin user chip */}
@@ -187,8 +187,8 @@ export default function AdminLayout({ children, title }) {
                 onClick={() => switchRole('user')}
                 className="w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 active:bg-emerald-50 active:text-emerald-700 transition-all duration-150"
               >
-                <GraduationCap size={18} />
-                <span className="flex-1">Switch to Student View</span>
+                <User size={18} />
+                <span className="flex-1">Switch to User View</span>
               </button>
               <button
                 onClick={() => setShowLogoutConfirm(true)}
